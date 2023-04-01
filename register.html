@@ -30,12 +30,12 @@
             <input type="text" required>
             <label>Gmail</label>
         </div>
-        <div class="txt_field">
+        <!-- <div class="txt_field">
           <select id="country" required>
             <option value="" selected disabled hidden>Select Country</option>
           </select>
           <label>Country</label>
-        </div>
+        </div> -->
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
           <input type="submit" value="Sign Up">
         </div>
@@ -46,5 +46,16 @@
     </div>
     <script src="svg-country-flags.min.js"></script>
     <script src="country.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const script = document.createElement('script');
+      script.src = 'checkPassword.js';
+      document.body.appendChild(script);
+    });
+    });
+    </script>
   </body>
 </html>
